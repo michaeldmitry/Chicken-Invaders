@@ -5,78 +5,91 @@
 
 Button::Button()
 {
-    button;
+    key;
     text;
 }
 
-Button::Button(sf::RectangleShape b, sf::Text t)
+Button::Button(const sf::Vector2f& s, const sf::Color& c, const sf::Vector2f& p, const sf::Font& f, int ch, const std::string& str, const sf::Color& col, const sf::Vector2f& pos)
 {
-    button = b;
-    text = t;
+    setButtonSize(s);
+    setButtonColor(c);
+    setButtonPosition(p);
+
+    setTextFont(f);
+    setTextCharacterSize(ch);
+    setTextString(str);
+    setTextColor(col);
+    setTextPosition(pos);
 }
 
-void Button::setButton(sf::RectangleShape b)
+void Button::setButton(const sf::Vector2f& s, const sf::Color& c, const sf::Vector2f& p)
 {
-    button = b;
+    setButtonSize(s);
+    setButtonColor(c);
+    setButtonPosition(p);
 }
 
-void Button::setButtonSize(sf::Vector2f& s)
+void Button::setButtonSize(const sf::Vector2f& s)
 {
-    button.setSize(sf::Vector2f(s));
+    key.setSize(sf::Vector2f(s));
 }
-void Button::setButtonColor(sf::Color& c)
+void Button::setButtonColor(const sf::Color& c)
 {
-    button.setFillColor(c);
-}
-
-void Button::setButtonPosition(int& p)
-{
-    button.setPosition(p, p);
+    key.setFillColor(c);
 }
 
-void Button::setText(sf::Text t)
+void Button::setButtonPosition(const sf::Vector2f& p)
 {
-    text = t;
+    key.setPosition(p);
 }
 
-void Button::setTextFont(sf::Font& f)
+void Button::setText(const sf::Font& f, int ch, const std::string& str, const sf::Color& col, const sf::Vector2f& pos)
+{
+    setTextFont(f);
+    setTextCharacterSize(ch);
+    setTextString(str);
+    setTextColor(col);
+    setTextPosition(pos);
+}
+
+void Button::setTextFont(const sf::Font& f)
 {
     text.setFont(f);
 }
     
-void Button::setTextCharacterSize(int& ch)
+void Button::setTextCharacterSize(int ch)
 {
     text.setCharacterSize(ch);
 }
     
-void Button::setTextString(std::string& str)
+void Button::setTextString(const std::string& str)
 {
     text.setString(str);
 }
     
-void Button::setTextColor(sf::Color& col)
+void Button::setTextColor(const sf::Color& col)
 {
     text.setFillColor(col);
 }
     
-void Button::setTextPosition(int& pos)
+void Button::setTextPosition(const sf::Vector2f& pos)
 {
-    text.setPosition(pos, pos);
+    text.setPosition(pos);
 }
 
-sf::Vector2f Button::getButtonSize() const
+const sf::Vector2f& Button::getButtonSize() const
 {
-    return button.getSize();
+    return key.getSize();
 }
     
-sf::Color Button::getButtonColor() const
+const sf::Color& Button::getButtonFillColor() const
 {
-    return button.getFillColor();
+    return key.getFillColor();
 }
     
-sf::Vector2f Button::getButtonPosition() const
+const sf::Vector2f& Button::getButtonPosition() const
 {
-    return button.getPosition();
+    return key.getPosition();
 }
     
 int Button::getTextCharacterSize() const
@@ -84,29 +97,19 @@ int Button::getTextCharacterSize() const
     return text.getCharacterSize();
 }
     
-std::string Button::getTextString() const
+const std::string& Button::getTextString() const
 {
     return text.getString();
 }
     
-sf::Color Button::getTextColor() const
+const sf::Color& Button::getTextColor() const
 {
     return text.getFillColor();
 }
     
-sf::Vector2f Button::getTextPosition() const
+const sf::Vector2f& Button::getTextPosition() const
 {
     return text.getPosition();
-}
-
-sf::RectangleShape Button::getButton() const
-{
-    return button;
-}
-    
-sf::Text Button::getText() const
-{
-    return text;
 }
     
 Button::~Button()

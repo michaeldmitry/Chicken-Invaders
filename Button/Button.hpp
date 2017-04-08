@@ -8,35 +8,33 @@
 class Button
 {
 private:
-    sf::RectangleShape button;
+    sf::RectangleShape key;
     sf::Text text;
 public:
     Button();
-    Button(sf::RectangleShape b, sf::Text t);
+    Button(const sf::Vector2f& s, const sf::Color& c, const sf::Vector2f& p, const sf::Font& f, int ch, const std::string& str, const sf::Color& col, const sf::Vector2f& pos);
     
-    void setButton(sf::RectangleShape b);
-    void setButtonSize(sf::Vector2f& s);
-    void setButtonColor(sf::Color& c);
-    void setButtonPosition(int& p);
+    void setButton(const sf::Vector2f& s, const sf::Color& c, const sf::Vector2f& p);
+    void setButtonSize(const sf::Vector2f& s);
+    void setButtonColor(const sf::Color& c);
+    void setButtonPosition(const sf::Vector2f& p);
     
-    void setText(sf::Text t);
-    void setTextFont(sf::Font& f);
-    void setTextCharacterSize(int& ch);
-    void setTextString(std::string& str);
-    void setTextColor(sf::Color& col);
-    void setTextPosition(int& pos);
+    void setText(const sf::Font& f, int ch, const std::string& str, const sf::Color& col, const sf::Vector2f& pos);
+    void setTextFont(const sf::Font& f);
+    void setTextCharacterSize(int ch);
+    void setTextString(const std::string& str);
+    void setTextColor(const sf::Color& col);
+    void setTextPosition(const sf::Vector2f& pos);
     
-    sf::Vector2f getButtonSize() const;
-    sf::Color getButtonColor() const;
-    sf::Vector2f getButtonPosition() const;
+    const sf::Vector2f& getButtonSize() const;
+    const sf::Color& getButtonFillColor() const;
+    const sf::Vector2f& getButtonPosition() const;
 
     int getTextCharacterSize() const;
-    std::string getTextString() const;
-    sf::Color getTextColor() const;
-    sf::Vector2f getTextPosition() const;
-    
-    sf::RectangleShape getButton() const;
-    sf::Text getText() const;
+    const std::string& getTextString() const;
+    const sf::Color& getTextColor() const;
+    const sf::Vector2f& getTextPosition() const;
+
     ~Button();
 };
 #endif /* Button_hpp */
