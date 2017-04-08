@@ -15,26 +15,25 @@ public:
     Button(sf::RectangleShape b, sf::Text t);
     
     void setButton(sf::RectangleShape b);
-    void setButtonSize(sf::RectangleShape b);
-    void setButtonColor(sf::RectangleShape b);
-    void setButtonPosition(sf::RectangleShape b);
+    void setButtonSize(sf::Vector2f& s);
+    void setButtonColor(sf::Color& c);
+    void setButtonPosition(int& p);
     
     void setText(sf::Text t);
-    void setTextFont(sf::Text t);
-    void setTextCharacterSize(sf::Text t);
-    void setTextString(sf::Text t);
-    void setTextColor(sf::Text t);
-    void setTextPosition(sf::Text t);
+    void setTextFont(sf::Font& f);
+    void setTextCharacterSize(int& ch);
+    void setTextString(std::string& str);
+    void setTextColor(sf::Color& col);
+    void setTextPosition(int& pos);
     
-    sf::RectangleShape getButtonSize() const;
-    sf::RectangleShape getButtonColor() const;
-    sf::RectangleShape getButtonPosition() const;
-    
-    sf::Text getTextFont() const;
-    sf::Text getTextCharacterSize() const;
-    sf::Text getTextString() const;
-    sf::Text getTextColor() const;
-    sf::Text getTextPosition() const;
+    sf::Vector2f getButtonSize() const;
+    sf::Color getButtonColor() const;
+    sf::Vector2f getButtonPosition() const;
+
+    int getTextCharacterSize() const;
+    std::string getTextString() const;
+    sf::Color getTextColor() const;
+    sf::Vector2f getTextPosition() const;
     
     sf::RectangleShape getButton() const;
     sf::Text getText() const;

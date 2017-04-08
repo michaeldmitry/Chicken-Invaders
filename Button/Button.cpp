@@ -20,18 +20,18 @@ void Button::setButton(sf::RectangleShape b)
     button = b;
 }
 
-void Button::setButtonSize(sf::RectangleShape b)
+void Button::setButtonSize(sf::Vector2f& s)
 {
-    button.setSize(sf::Vector2f(0));
+    button.setSize(sf::Vector2f(s));
 }
-void Button::setButtonColor(sf::RectangleShape b)
+void Button::setButtonColor(sf::Color& c)
 {
-    button.setFillColor(sf::Color::Red);
+    button.setFillColor(c);
 }
 
-void Button::setButtonPosition(sf::RectangleShape b)
+void Button::setButtonPosition(int& p)
 {
-    button.setPosition(100, 100);
+    button.setPosition(p, p);
 }
 
 void Button::setText(sf::Text t)
@@ -39,70 +39,62 @@ void Button::setText(sf::Text t)
     text = t;
 }
 
-void Button::setTextFont(sf::Text t)
+void Button::setTextFont(sf::Font& f)
 {
-    sf::Font font;
-    if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
-        return EXIT_FAILURE;
-        text.setFont(font);
+    text.setFont(f);
 }
     
-void Button::setTextCharacterSize(sf::Text t)
+void Button::setTextCharacterSize(int& ch)
 {
-    text.setTextCharacterSize(20);
+    text.setCharacterSize(ch);
 }
     
-void Button::setTextString(sf::Text t)
+void Button::setTextString(std::string& str)
 {
-    text.setTextString("");
+    text.setString(str);
 }
     
-void Button::setTextColor(sf::Text t)
+void Button::setTextColor(sf::Color& col)
 {
-    text.setFillColor(sf::Color::White);
+    text.setFillColor(col);
 }
     
-void Button::setTextPosition(sf::Text t)
+void Button::setTextPosition(int& pos)
 {
-    text.setTextPosition(100,100);
+    text.setPosition(pos, pos);
 }
 
-sf::RectangleShape Button::getButtonSize() const
+sf::Vector2f Button::getButtonSize() const
 {
     return button.getSize();
 }
     
-sf::RectangleShape Button::getButtonColor() const
+sf::Color Button::getButtonColor() const
 {
     return button.getFillColor();
 }
     
-sf::RectangleShape Button::getButtonPosition() const
+sf::Vector2f Button::getButtonPosition() const
 {
     return button.getPosition();
 }
-
-sf::Text Button::getTextFont() const
-{
-    return text.getFont();
-}
     
-sf::Text Button::getTextCharacterSize() const
+int Button::getTextCharacterSize() const
 {
     return text.getCharacterSize();
 }
     
-sf::Text Button::getTextString() const
+std::string Button::getTextString() const
 {
     return text.getString();
 }
     
-sf::Text Button::getTextColor() const
+sf::Color Button::getTextColor() const
 {
     return text.getFillColor();
 }
     
-sf::Text Button::getTextPosition() const
+sf::Vector2f Button::getTextPosition() const
 {
     return text.getPosition();
 }
