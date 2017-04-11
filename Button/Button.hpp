@@ -5,6 +5,11 @@
 #include "ResourcePath.hpp"
 #include <stdio.h>
 
+<<<<<<< HEAD
+=======
+// Add setTexture and getTexture functions. Add drawButton function.
+
+>>>>>>> c7fa4fed0a1d2bd27f6d06cf469a71f4d1e6f675
 class Button
 {
 private:
@@ -12,7 +17,12 @@ private:
     sf::Text text;
 public:
     Button();
+<<<<<<< HEAD
     Button(const sf::Vector2f& s, const sf::Color& c, const sf::Vector2f& pos, const sf::Font& f, int ch, const std::string& str, const sf::Color& col);
+=======
+    Button(const sf::Vector2f& s, const sf::Color& c, const sf::Vector2f& p, const sf::Font& f, int ch, const std::string& str, const sf::Color& col, const sf::Vector2f& pos);
+    ~Button();
+>>>>>>> c7fa4fed0a1d2bd27f6d06cf469a71f4d1e6f675
     
     void setButtonSize(const sf::Vector2f& s);
     void setButtonColor(const sf::Color& c);
@@ -27,11 +37,16 @@ public:
     const sf::Vector2f& getButtonSize() const;
     const sf::Color& getButtonFillColor() const;
     const sf::Vector2f& getButtonPosition() const;
-
+    
     int getTextCharacterSize() const;
     const std::string& getTextString() const;
     const sf::Color& getTextColor() const;
+<<<<<<< HEAD
 
     ~Button();
+=======
+    const sf::Vector2f& getTextPosition() const;
+    
+>>>>>>> c7fa4fed0a1d2bd27f6d06cf469a71f4d1e6f675
 };
 #endif /* Button_hpp */
