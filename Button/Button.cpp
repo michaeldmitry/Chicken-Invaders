@@ -5,15 +5,13 @@
 
 Button::Button()
 {
-    key;
-    text;
 }
 
-Button::Button(const sf::Vector2f& s, const sf::Color& c, const sf::Vector2f& p, const sf::Font& f, int ch, const std::string& str, const sf::Color& col, const sf::Vector2f& pos)
+Button::Button(const sf::Vector2f& s, const sf::Color& c, const sf::Vector2f& pos, const sf::Font& f, int ch, const std::string& str, const sf::Color& col)
 {
     setButtonSize(s);
     setButtonColor(c);
-    setButtonPosition(p);
+    setButtonPosition(pos);
 
     setTextFont(f);
     setTextCharacterSize(ch);
@@ -22,34 +20,18 @@ Button::Button(const sf::Vector2f& s, const sf::Color& c, const sf::Vector2f& p,
     setTextPosition(pos);
 }
 
-void Button::setButton(const sf::Vector2f& s, const sf::Color& c, const sf::Vector2f& p)
-{
-    setButtonSize(s);
-    setButtonColor(c);
-    setButtonPosition(p);
-}
-
 void Button::setButtonSize(const sf::Vector2f& s)
 {
-    key.setSize(sf::Vector2f(s));
+    key.setSize(s);
 }
 void Button::setButtonColor(const sf::Color& c)
 {
     key.setFillColor(c);
 }
 
-void Button::setButtonPosition(const sf::Vector2f& p)
+void Button::setButtonPosition(const sf::Vector2f& pos)
 {
-    key.setPosition(p);
-}
-
-void Button::setText(const sf::Font& f, int ch, const std::string& str, const sf::Color& col, const sf::Vector2f& pos)
-{
-    setTextFont(f);
-    setTextCharacterSize(ch);
-    setTextString(str);
-    setTextColor(col);
-    setTextPosition(pos);
+    key.setPosition(pos);
 }
 
 void Button::setTextFont(const sf::Font& f)
@@ -105,11 +87,6 @@ const std::string& Button::getTextString() const
 const sf::Color& Button::getTextColor() const
 {
     return text.getFillColor();
-}
-    
-const sf::Vector2f& Button::getTextPosition() const
-{
-    return text.getPosition();
 }
     
 Button::~Button()
