@@ -21,9 +21,19 @@
 #include "ResourcePath.hpp"
 #include "Button.hpp"
 
+#include <iostream>
+
 
 int main(int, char const**)
 {
+    // Create a graphical text to display
+    sf::Font font;
+    if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
+        return EXIT_FAILURE;
+    }
+    
+    Button b(sf::Vector2f(260, 170), sf::Color::Black, sf::Vector2f(50, 50), font, 50, "Highscores", sf::Color::White);
+    
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
 
@@ -41,11 +51,7 @@ int main(int, char const**)
     }
     sf::Sprite sprite(texture);
 
-    // Create a graphical text to display
-    sf::Font font;
-    if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
-        return EXIT_FAILURE;
-    }
+    
     sf::Text text("Hello SFML", font, 50);
     text.setFillColor(sf::Color::Black);
 
@@ -74,6 +80,13 @@ int main(int, char const**)
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
                 window.close();
             }
+            
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                if(b.isClicked(window))
+                    std::cout << "Yaaay" << std::endl;
+            }
+            
+            b.moveDown(20);
         }
 
         // Clear screen
@@ -84,9 +97,13 @@ int main(int, char const**)
 
         // Draw the string
         window.draw(text);
+        
+        b.draw(window);
+
 
         // Update the window
         window.display();
+        
     }
 
     return EXIT_SUCCESS;
