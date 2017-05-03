@@ -28,8 +28,18 @@ int main(int, char const**)
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
     window.setFramerateLimit(20);
 
-    Player player(sf::Vector2f(50,50),sf::Color::Blue,sf::Vector2f(400,500));
-
+    sf::Texture pic;
+    if(!pic.loadFromFile(resourcePath()+"airplane shooter-2.png"))
+        return EXIT_FAILURE;
+    
+    Player player(sf::Vector2f(100,200),sf::Vector2f(400,500), sf::Color::White, &pic);
+    player.setPlayerTexture(&pic);
+    sf::RectangleShape p;
+    p.setSize(sf::Vector2f(50,50));
+    p.setFillColor(sf::Color::White);
+    p.setPosition(400, 100);
+    sf ::Clock clock;
+    sf::Time time;
     
 
 
@@ -50,27 +60,24 @@ int main(int, char const**)
             
         }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-        player.moveX(5);
+        player.moveX(window, 5);
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-            player.moveX(-5);
+            player.moveX(window, -5);
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-            player.moveY(-5);
+            player.moveY(window, -5);
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-            player.moveY(5);
+            player.moveY(window, 5);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
     {
         player.fire();
     }
-        //for(int i = 0; i < projectileArray.size(); i++)
-        //{
-           // projectile.fire();
-      //  }
-    
+        player.eraseProjectile(e);
         
         // Clear screen
         window.clear();
         player.drawPlayer(window);
-       
+        window.draw(p);
+       // window.draw(pic);
         // Update the window
         window.display();
     }

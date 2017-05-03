@@ -7,31 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4542A8711EAE38DC00D24A38 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4542A8701EAE38DC00D24A38 /* ResourcePath.mm */; };
-		4542A8741EAE38DC00D24A38 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4542A8731EAE38DC00D24A38 /* main.cpp */; };
-		4542A87B1EAE38DC00D24A38 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4542A87A1EAE38DC00D24A38 /* sansation.ttf */; };
-		4542A8851EAE390100D24A38 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4542A8831EAE390100D24A38 /* Player.cpp */; };
-		4542A8881EAE3C8300D24A38 /* Projectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4542A8871EAE3C8300D24A38 /* Projectile.cpp */; };
-		4542A88A1EB10BB200D24A38 /* airplane shooter-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4542A8891EB10BB200D24A38 /* airplane shooter-2.png */; };
+		4542A89B1EB26F2D00D24A38 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4542A89A1EB26F2D00D24A38 /* ResourcePath.mm */; };
+		4542A89E1EB26F2D00D24A38 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4542A89D1EB26F2D00D24A38 /* main.cpp */; };
+		4542A8AF1EB36B4800D24A38 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4542A8AD1EB36B4800D24A38 /* Enemy.cpp */; };
+		4542A8B31EB4D7D800D24A38 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4542A8B21EB4D7D800D24A38 /* Player.cpp */; };
+		4542A8B51EB4D7E200D24A38 /* Projectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4542A8B41EB4D7E200D24A38 /* Projectile.cpp */; };
+		4542A8B91EB7802A00D24A38 /* airplane shooter-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4542A8B81EB7802A00D24A38 /* airplane shooter-2.png */; };
+		4542A8BC1EB790ED00D24A38 /* egg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4542A8BB1EB790ED00D24A38 /* egg.png */; };
+		4542A8FD1EB9046400D24A38 /* chicken sprite 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4542A8FC1EB9046400D24A38 /* chicken sprite 3.png */; };
+		4542A8FF1EB9047300D24A38 /* spaceship sprites.png in Resources */ = {isa = PBXBuildFile; fileRef = 4542A8FE1EB9047300D24A38 /* spaceship sprites.png */; };
+		4542A9011EB9060600D24A38 /* big chicken 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4542A9001EB9060600D24A38 /* big chicken 1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4542A86B1EAE38DC00D24A38 /* Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4542A86F1EAE38DC00D24A38 /* Player-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Player-Info.plist"; sourceTree = "<group>"; };
-		4542A8701EAE38DC00D24A38 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
-		4542A8721EAE38DC00D24A38 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
-		4542A8731EAE38DC00D24A38 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		4542A87A1EAE38DC00D24A38 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
-		4542A8831EAE390100D24A38 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
-		4542A8841EAE390100D24A38 /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
-		4542A8861EAE3C2900D24A38 /* Projectile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Projectile.hpp; path = ../../Bullet/Bullet/Projectile.hpp; sourceTree = "<group>"; };
-		4542A8871EAE3C8300D24A38 /* Projectile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Projectile.cpp; path = ../../Bullet/Bullet/Projectile.cpp; sourceTree = "<group>"; };
-		4542A8891EB10BB200D24A38 /* airplane shooter-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "airplane shooter-2.png"; path = "../../../../../Desktop/chick_invade/MEDIA EDITED/airplane shooter-2.png"; sourceTree = "<group>"; };
-		4542A8BA1EB7895E00D24A38 /* Enemy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Enemy.hpp; path = ../../Enemy/Enemy/Enemy.hpp; sourceTree = "<group>"; };
+		4542A8951EB26F2D00D24A38 /* Enemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enemy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4542A8991EB26F2D00D24A38 /* Enemy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Enemy-Info.plist"; sourceTree = "<group>"; };
+		4542A89A1EB26F2D00D24A38 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		4542A89C1EB26F2D00D24A38 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		4542A89D1EB26F2D00D24A38 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4542A8AD1EB36B4800D24A38 /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Enemy.cpp; path = Enemy/Enemy.cpp; sourceTree = "<group>"; };
+		4542A8AE1EB36B4800D24A38 /* Enemy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Enemy.hpp; path = Enemy/Enemy.hpp; sourceTree = "<group>"; };
+		4542A8B01EB4D45400D24A38 /* Projectile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Projectile.hpp; path = ../Bullet/Bullet/Projectile.hpp; sourceTree = "<group>"; };
+		4542A8B11EB4D46700D24A38 /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Player.hpp; path = ../Player/Player/Player.hpp; sourceTree = "<group>"; };
+		4542A8B21EB4D7D800D24A38 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../Player/Player/Player.cpp; sourceTree = "<group>"; };
+		4542A8B41EB4D7E200D24A38 /* Projectile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Projectile.cpp; path = ../Bullet/Bullet/Projectile.cpp; sourceTree = "<group>"; };
+		4542A8B81EB7802A00D24A38 /* airplane shooter-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "airplane shooter-2.png"; path = "../../../../Desktop/chick_invade/MEDIA EDITED/airplane shooter-2.png"; sourceTree = "<group>"; };
+		4542A8BB1EB790ED00D24A38 /* egg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = egg.png; path = "../../../../Desktop/chick_invade/MEDIA EDITED/egg.png"; sourceTree = "<group>"; };
+		4542A8FC1EB9046400D24A38 /* chicken sprite 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chicken sprite 3.png"; sourceTree = "<group>"; };
+		4542A8FE1EB9047300D24A38 /* spaceship sprites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spaceship sprites.png"; sourceTree = "<group>"; };
+		4542A9001EB9060600D24A38 /* big chicken 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "big chicken 1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4542A8671EAE38DC00D24A38 /* Frameworks */ = {
+		4542A8911EB26F2D00D24A38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,52 +49,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4542A8611EAE38DC00D24A38 = {
+		4542A88B1EB26F2D00D24A38 = {
 			isa = PBXGroup;
 			children = (
-				4542A86D1EAE38DC00D24A38 /* Player */,
-				4542A86C1EAE38DC00D24A38 /* Products */,
+				4542A8971EB26F2D00D24A38 /* Enemy */,
+				4542A8961EB26F2D00D24A38 /* Products */,
+				4542A9001EB9060600D24A38 /* big chicken 1.png */,
+				4542A8FE1EB9047300D24A38 /* spaceship sprites.png */,
+				4542A8FC1EB9046400D24A38 /* chicken sprite 3.png */,
+				4542A8BB1EB790ED00D24A38 /* egg.png */,
+				4542A8B81EB7802A00D24A38 /* airplane shooter-2.png */,
+				4542A8B01EB4D45400D24A38 /* Projectile.hpp */,
+				4542A8B41EB4D7E200D24A38 /* Projectile.cpp */,
+				4542A8B11EB4D46700D24A38 /* Player.hpp */,
+				4542A8B21EB4D7D800D24A38 /* Player.cpp */,
+				4542A8AE1EB36B4800D24A38 /* Enemy.hpp */,
+				4542A8AD1EB36B4800D24A38 /* Enemy.cpp */,
 			);
 			sourceTree = "<group>";
 		};
-		4542A86C1EAE38DC00D24A38 /* Products */ = {
+		4542A8961EB26F2D00D24A38 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4542A86B1EAE38DC00D24A38 /* Player.app */,
+				4542A8951EB26F2D00D24A38 /* Enemy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4542A86D1EAE38DC00D24A38 /* Player */ = {
+		4542A8971EB26F2D00D24A38 /* Enemy */ = {
 			isa = PBXGroup;
 			children = (
-				4542A8701EAE38DC00D24A38 /* ResourcePath.mm */,
-				4542A8721EAE38DC00D24A38 /* ResourcePath.hpp */,
-				4542A8731EAE38DC00D24A38 /* main.cpp */,
-				4542A8751EAE38DC00D24A38 /* Resources */,
-				4542A86E1EAE38DC00D24A38 /* Supporting Files */,
-				4542A8831EAE390100D24A38 /* Player.cpp */,
-				4542A8841EAE390100D24A38 /* Player.hpp */,
+				4542A89A1EB26F2D00D24A38 /* ResourcePath.mm */,
+				4542A89C1EB26F2D00D24A38 /* ResourcePath.hpp */,
+				4542A89D1EB26F2D00D24A38 /* main.cpp */,
+				4542A89F1EB26F2D00D24A38 /* Resources */,
+				4542A8981EB26F2D00D24A38 /* Supporting Files */,
 			);
-			path = Player;
+			path = Enemy;
 			sourceTree = "<group>";
 		};
-		4542A86E1EAE38DC00D24A38 /* Supporting Files */ = {
+		4542A8981EB26F2D00D24A38 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4542A8BA1EB7895E00D24A38 /* Enemy.hpp */,
-				4542A8871EAE3C8300D24A38 /* Projectile.cpp */,
-				4542A8861EAE3C2900D24A38 /* Projectile.hpp */,
-				4542A86F1EAE38DC00D24A38 /* Player-Info.plist */,
+				4542A8991EB26F2D00D24A38 /* Enemy-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4542A8751EAE38DC00D24A38 /* Resources */ = {
+		4542A89F1EB26F2D00D24A38 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4542A8891EB10BB200D24A38 /* airplane shooter-2.png */,
-				4542A87A1EAE38DC00D24A38 /* sansation.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -94,71 +106,74 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4542A86A1EAE38DC00D24A38 /* Player */ = {
+		4542A8941EB26F2D00D24A38 /* Enemy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4542A8801EAE38DC00D24A38 /* Build configuration list for PBXNativeTarget "Player" */;
+			buildConfigurationList = 4542A8AA1EB26F2D00D24A38 /* Build configuration list for PBXNativeTarget "Enemy" */;
 			buildPhases = (
-				4542A8661EAE38DC00D24A38 /* Sources */,
-				4542A8671EAE38DC00D24A38 /* Frameworks */,
-				4542A8681EAE38DC00D24A38 /* Resources */,
-				4542A8691EAE38DC00D24A38 /* ShellScript */,
+				4542A8901EB26F2D00D24A38 /* Sources */,
+				4542A8911EB26F2D00D24A38 /* Frameworks */,
+				4542A8921EB26F2D00D24A38 /* Resources */,
+				4542A8931EB26F2D00D24A38 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Player;
-			productName = Player;
-			productReference = 4542A86B1EAE38DC00D24A38 /* Player.app */;
+			name = Enemy;
+			productName = Enemy;
+			productReference = 4542A8951EB26F2D00D24A38 /* Enemy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4542A8621EAE38DC00D24A38 /* Project object */ = {
+		4542A88C1EB26F2D00D24A38 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Sherry A. Guirguis";
 				TargetAttributes = {
-					4542A86A1EAE38DC00D24A38 = {
+					4542A8941EB26F2D00D24A38 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7X6RYT362E;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 4542A8651EAE38DC00D24A38 /* Build configuration list for PBXProject "Player" */;
+			buildConfigurationList = 4542A88F1EB26F2D00D24A38 /* Build configuration list for PBXProject "Enemy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 4542A8611EAE38DC00D24A38;
-			productRefGroup = 4542A86C1EAE38DC00D24A38 /* Products */;
+			mainGroup = 4542A88B1EB26F2D00D24A38;
+			productRefGroup = 4542A8961EB26F2D00D24A38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4542A86A1EAE38DC00D24A38 /* Player */,
+				4542A8941EB26F2D00D24A38 /* Enemy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4542A8681EAE38DC00D24A38 /* Resources */ = {
+		4542A8921EB26F2D00D24A38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4542A88A1EB10BB200D24A38 /* airplane shooter-2.png in Resources */,
-				4542A87B1EAE38DC00D24A38 /* sansation.ttf in Resources */,
+				4542A8FD1EB9046400D24A38 /* chicken sprite 3.png in Resources */,
+				4542A8BC1EB790ED00D24A38 /* egg.png in Resources */,
+				4542A8FF1EB9047300D24A38 /* spaceship sprites.png in Resources */,
+				4542A8B91EB7802A00D24A38 /* airplane shooter-2.png in Resources */,
+				4542A9011EB9060600D24A38 /* big chicken 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4542A8691EAE38DC00D24A38 /* ShellScript */ = {
+		4542A8931EB26F2D00D24A38 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -174,21 +189,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4542A8661EAE38DC00D24A38 /* Sources */ = {
+		4542A8901EB26F2D00D24A38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4542A8881EAE3C8300D24A38 /* Projectile.cpp in Sources */,
-				4542A8741EAE38DC00D24A38 /* main.cpp in Sources */,
-				4542A8711EAE38DC00D24A38 /* ResourcePath.mm in Sources */,
-				4542A8851EAE390100D24A38 /* Player.cpp in Sources */,
+				4542A8B31EB4D7D800D24A38 /* Player.cpp in Sources */,
+				4542A8AF1EB36B4800D24A38 /* Enemy.cpp in Sources */,
+				4542A8B51EB4D7E200D24A38 /* Projectile.cpp in Sources */,
+				4542A89E1EB26F2D00D24A38 /* main.cpp in Sources */,
+				4542A89B1EB26F2D00D24A38 /* ResourcePath.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4542A87E1EAE38DC00D24A38 /* Debug */ = {
+		4542A8A81EB26F2D00D24A38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -232,7 +248,7 @@
 			};
 			name = Debug;
 		};
-		4542A87F1EAE38DC00D24A38 /* Release */ = {
+		4542A8A91EB26F2D00D24A38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -276,21 +292,21 @@
 			};
 			name = Release;
 		};
-		4542A8811EAE38DC00D24A38 /* Debug */ = {
+		4542A8AB1EB26F2D00D24A38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7X6RYT362E;
-				INFOPLIST_FILE = "Player/Player-Info.plist";
+				INFOPLIST_FILE = "Enemy/Enemy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		4542A8821EAE38DC00D24A38 /* Release */ = {
+		4542A8AC1EB26F2D00D24A38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7X6RYT362E;
-				INFOPLIST_FILE = "Player/Player-Info.plist";
+				INFOPLIST_FILE = "Enemy/Enemy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -299,25 +315,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4542A8651EAE38DC00D24A38 /* Build configuration list for PBXProject "Player" */ = {
+		4542A88F1EB26F2D00D24A38 /* Build configuration list for PBXProject "Enemy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4542A87E1EAE38DC00D24A38 /* Debug */,
-				4542A87F1EAE38DC00D24A38 /* Release */,
+				4542A8A81EB26F2D00D24A38 /* Debug */,
+				4542A8A91EB26F2D00D24A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4542A8801EAE38DC00D24A38 /* Build configuration list for PBXNativeTarget "Player" */ = {
+		4542A8AA1EB26F2D00D24A38 /* Build configuration list for PBXNativeTarget "Enemy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4542A8811EAE38DC00D24A38 /* Debug */,
-				4542A8821EAE38DC00D24A38 /* Release */,
+				4542A8AB1EB26F2D00D24A38 /* Debug */,
+				4542A8AC1EB26F2D00D24A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4542A8621EAE38DC00D24A38 /* Project object */;
+	rootObject = 4542A88C1EB26F2D00D24A38 /* Project object */;
 }
