@@ -81,11 +81,6 @@ void Projectile::rotate(float a)
     bomb.rotate(a);
 }
 
-sf::Vector2f Projectile::getProjectilePosition() const
-{
-    return bomb.getPosition();
-}
-
 void Projectile::fire()
 {
     fired = true;
@@ -96,18 +91,24 @@ bool Projectile::isFired()
     return fired;
 }
 
-sf::Color Projectile::getProjectileColor()
+
+sf::Color Projectile::getProjectileColor() const
 {
     return bomb.getFillColor();
 }
 
-sf::Vector2f Projectile::getProjectileSize()
+sf::Vector2f Projectile::getProjectileSize() const
 {
     return bomb.getSize();
 }
 
-sf::Vector2f Projectile::getProjectilePosition()
+sf::Vector2f Projectile::getProjectilePosition() const
 {
     return bomb.getPosition();
+}
+
+sf::Rect<float> Projectile::getProjectileGlobalBounds() const
+{
+    return bomb.getGlobalBounds();
 }
 

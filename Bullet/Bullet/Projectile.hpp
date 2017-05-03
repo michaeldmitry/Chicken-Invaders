@@ -35,10 +35,9 @@ public:
     void move();
     void rotate(float a);
     
+    sf::Color getProjectileColor() const;
+    sf::Vector2f getProjectileSize() const;
     sf::Vector2f getProjectilePosition() const;
-    
-    sf::Color getProjectileColor();
-    sf::Vector2f getProjectileSize();
-    sf::Vector2f getProjectilePosition();
+    sf::Rect<float> getProjectileGlobalBounds() const;
 };
 #endif /* Projectile_hpp */

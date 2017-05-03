@@ -57,7 +57,7 @@ int main(int, char const**)
             
         }
         
-        if(x.isFired() && x.getPosition().y < 0){
+        if(x.isFired() && x.getProjectilePosition().y < 0){
             x.stopFire();
         }
         // Clear screen
