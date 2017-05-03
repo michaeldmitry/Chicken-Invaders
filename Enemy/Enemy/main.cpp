@@ -28,8 +28,8 @@ int main(int, char const**)
     vector<Enemy> e;
     
     e.push_back(enemy);
-    e[0].setEnemyTexture(&pic);
-    
+    //e[0].setEnemyTexture(&pic);
+    e[0].setEnemySprite(window);
     player.setPlayerTexture(&spaceship);
     
     //enemy.setEnemyTexture(&pic);
