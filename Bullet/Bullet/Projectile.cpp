@@ -47,10 +47,10 @@ void Projectile::setProjectileTexture(sf::Texture* pic)
 
 void Projectile::drawProjectile(sf::RenderWindow& window)
 {
-   // if(fired){
-        window.draw(bomb);
-        move();
-   // }
+    // if(fired){
+    window.draw(bomb);
+    move();
+    // }
 }
 
 void Projectile::stopFire()

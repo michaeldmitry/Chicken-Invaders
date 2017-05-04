@@ -14,22 +14,22 @@ Player::~Player()
 {
 }
 
-Player::Player(const sf::Vector2f& size, const sf::Vector2f& pos,sf::Color c, sf::Texture* pic)
+Player::Player(const sf::Vector2f& scale, const sf::Vector2f& pos,sf::Color c, sf::Texture* pic)
 {
-    setPlayerSize(size);
+    setPlayerScale(scale);
     setPlayerPosition(pos);
     setPlayerColor(c);
     setPlayerTexture(pic);
 }
 
-void Player::setPlayerSize(const sf::Vector2f& size)
+void Player::setPlayerScale(const sf::Vector2f& scale)
 {
-    player.setSize(size);
+    player.setScale(scale);
 }
 
 void Player::setPlayerColor(const sf::Color& col)
 {
-    player.setFillColor(col);
+    player.setColor(col);
 }
 
 void Player::setPlayerPosition(const sf::Vector2f& pos)
@@ -39,7 +39,7 @@ void Player::setPlayerPosition(const sf::Vector2f& pos)
 
 void Player::setPlayerTexture(sf::Texture* pic)
 {
-    player.setTexture(pic);
+    player.setTexture(*pic);
 }
 
 
@@ -65,11 +65,11 @@ void Player::setNumberOfBullets()
 
 void Player::moveX(sf::RenderWindow& window, float p)
 {
-    if ((p > 0) && (player.getPosition().x < (window.getSize().x - player.getSize().x)))
+    if ((p > 0) && (getPlayerPosition().x < (window.getSize().x - getPlayerSize().x)))
         player.move(p, 0);
     else {
-     if ((p < 0) && (player.getPosition().x > 0))
-         player.move(p, 0);}
+        if ((p < 0) && (getPlayerPosition().x > 0))
+            player.move(p, 0);}
 }
 
 void Player::moveY(sf::RenderWindow& window, float p)
@@ -77,8 +77,8 @@ void Player::moveY(sf::RenderWindow& window, float p)
     if ((p > 0) && (player.getPosition().y+100 != (window.getSize().y)))
         player.move(0, p);
     else {
-     if ((p < 0) && (player.getPosition().y > 0))
-         player.move(0,p);}
+        if ((p < 0) && (player.getPosition().y > 0))
+            player.move(0,p);}
 }
 
 void Player::move(float x, float y)
@@ -89,7 +89,7 @@ void Player::move(float x, float y)
 void Player::drawPlayer(sf::RenderWindow& window)
 {
     if(!lost)
-    window.draw(player);
+        window.draw(player);
     
     for(int i = 0; i < bullets.size(); i++)
         if(bullets[i].getProjectilePosition().y < 0)
@@ -131,19 +131,14 @@ void Player::eraseProjectile(int i)
         bullets.erase(bullets.begin() + i);
 }
 
-void Player::erasePlayer()
+sf::Vector2f Player::getPlayerScale() const
 {
-    player.setFillColor(sf::Color::Transparent);
-}
-
-sf::Vector2f Player::getPlayerSize() const
-{
-    return player.getSize();
+    return player.getScale();
 }
 
 sf::Color Player::getPlayerColor() const
 {
-    return player.getFillColor();
+    return player.getColor();
 }
 
 sf::Vector2f Player::getPlayerPosition() const
@@ -195,3 +190,38 @@ sf::Rect<float> Player::getPlayerGlobalBounds()
 void Player::killplayer(){
     lost = true;
 }
+
+void Player::setPlayTexture(sf::Texture* pic)
+{
+    proj_texture = pic;
+}
+
+void Player::setPlayOffset(const sf::Vector2f& o)
+{
+    proj_offset = o;
+}
+
+void Player::setPlayColor(const sf::Color& col)
+{
+    proj_color = col;
+}
+
+void Player::setPlaySize(const sf::Vector2f& s)
+{
+    proj_size = s;
+}
+void Player::setPlayStartingOffset(sf::Vector2f& s)
+{
+    proj_startingOffset = s;
+}
+
+sf::Vector2f Player::getPlayerSize() const
+{
+    return sf::Vector2f (player.getGlobalBounds().width, player.getGlobalBounds().height);
+}
+
+void Player::setPlayerTextureRect(const sf::IntRect& R)
+{
+    player.setTextureRect(R);
+}
+

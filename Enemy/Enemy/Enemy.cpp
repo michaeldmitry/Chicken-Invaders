@@ -101,7 +101,7 @@ const sf::Color& Enemy::getEnemyColor() const
 
 void Enemy::dropEgg(sf::RenderWindow& window)
 {
-
+    
     Projectile egg;
     
     egg.setProjectileColor(proj_color);
@@ -109,14 +109,14 @@ void Enemy::dropEgg(sf::RenderWindow& window)
     egg.setProjectileOffset(proj_offset);
     egg.setProjectileSize(proj_size);
     egg.setProjectilePosition(sf::Vector2f(getEnemyPosition().x + proj_startingOffset.x, getEnemyPosition().y + proj_startingOffset.y));
-
+    
     egg.fire();
     eggs.push_back(egg);
 }
 
 void Enemy::move()
 {
-        chicken.move(offset);
+    chicken.move(offset);
 }
 
 sf::FloatRect Enemy::getEnemyGlobalBounds()
@@ -127,16 +127,18 @@ sf::FloatRect Enemy::getEnemyGlobalBounds()
 bool Enemy::isPlayerDead(Player& p)
 {
     for (int i = 0; i < eggs.size(); i++)
-    {if (eggs[i].getProjectileGlobalBounds().intersects(p.getPlayerGlobalBounds()))
+    if (eggs[i].getProjectileGlobalBounds().intersects(p.getPlayerGlobalBounds()))
         return true;
-    else
-        return false;}
+    if(p.getPlayerGlobalBounds().intersects(getEnemyGlobalBounds()))
+        return true;
+    
+    return false;
 }
 
 void Enemy::killPlayer(Player& p)
 {
     if (isPlayerDead(p))
-    {   p.erasePlayer();
+    {   p.killplayer();
         p.decrementLives();
     }
 }

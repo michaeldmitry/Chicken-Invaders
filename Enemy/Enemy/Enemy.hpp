@@ -13,7 +13,7 @@ class Player;
 class Enemy
 {
 private:
-
+    
     //sf::RectangleShape chicken;
     vector <Projectile> eggs;
     sf::Vector2f offset, proj_offset;
@@ -65,7 +65,7 @@ public:
     
     bool isPlayerDead(Player& p);
     void killPlayer(Player& p);
-
-    };
+    
+};
 
 #endif /* Enemy_hpp */

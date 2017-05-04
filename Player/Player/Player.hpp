@@ -13,20 +13,26 @@ using namespace std;
 class Player
 {
 private:
-    sf::RectangleShape player;
+    //sf::RectangleShape player;
     int lives;
     vector <Projectile> bullets;
     sf::Color col;
     sf::Clock clock;
     sf::Time time;
     bool lost;
+    sf::Sprite player;
+    sf::Color proj_color;
+    sf::Vector2f proj_size;
+    sf::Vector2f proj_startingOffset;
+    sf::Texture* proj_texture;
+    sf::Vector2f offset, proj_offset;
 public:
     
     Player();
     ~Player();
     Player(const sf::Vector2f& size, const sf::Vector2f& pos,sf::Color, sf::Texture* pic);
     
-    void setPlayerSize(const sf::Vector2f& size);
+    void setPlayerScale(const sf::Vector2f& scale);
     void setPlayerColor(const sf::Color& col);
     void setPlayerPosition(const sf::Vector2f& pos);
     void setPlayerTexture(sf::Texture* pic);
@@ -36,6 +42,13 @@ public:
     void setNumberOfBullets();
     void drawPlayer(sf::RenderWindow& window);
     void fire();
+    
+    void setPlayerTextureRect(const sf::IntRect& R);
+    void setPlayTexture(sf::Texture* pic);
+    void setPlayOffset(const sf::Vector2f& o);
+    void setPlayColor(const sf::Color& col);
+    void setPlaySize(const sf::Vector2f& s);
+    void setPlayStartingOffset(sf::Vector2f& s);
     
     void moveX(sf::RenderWindow& window, float p);
     void moveY(sf::RenderWindow& window, float p);
@@ -47,11 +60,11 @@ public:
     bool isCollide(sf::RectangleShape& object,int i);
     void eraseProjectile(sf::RectangleShape& object);
     void eraseProjectile(int i);
-    void erasePlayer();
     
     sf::Rect<float> getProjectileGlobalBounds(int i);
     sf::Rect<float> getPlayerGlobalBounds();
     
+    sf::Vector2f getPlayerScale() const;
     sf::Vector2f getPlayerSize() const;
     sf::Color getPlayerColor() const;
     sf::Vector2f getPlayerPosition() const;
