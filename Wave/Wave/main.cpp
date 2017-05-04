@@ -3,6 +3,7 @@
 #include "ResourcePath.hpp"
 #include "Enemy.hpp"
 #include"Player.hpp"
+#include "Wave.hpp"
 
 
 #define RATE_EGGS 100
@@ -10,9 +11,9 @@
 
 bool isChickenHitByBullet(Player& p, Enemy& e);
 void eraseChicken(Player& p, vector <Enemy>& e);
-void changeChickenAnimation(Enemy& chicken, int& counter);
+//void changeChickenAnimation(Enemy& chicken, int& counter);
 
-bool checkChickenBoundary(const sf::RenderWindow& window, const Enemy& chicken);
+//bool checkChickenBoundary(const sf::RenderWindow& window, const Enemy& chicken);
 bool shouldDropEgg();
 
 
@@ -21,7 +22,7 @@ int main(int, char const**)
     srand(int(time(NULL)));
     
     int chick_anim_counter = 0;
-
+    
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
     window.setFramerateLimit(20);
@@ -37,7 +38,7 @@ int main(int, char const**)
     //create player
     Player player(sf::Vector2f(150,250),sf::Vector2f(400,500),sf::Color::White, &spaceship);
     player.setPlayerTexture(&spaceship);
-
+    
     
     //create enemy
     sf::Vector2f base_pos(100, 100);
@@ -45,11 +46,11 @@ int main(int, char const**)
     sf::Texture egg;
     if(!egg.loadFromFile(resourcePath() + "egg.png"))
         return EXIT_FAILURE;
-
+    
     Enemy enemy;
     
     
-
+    
     enemy.setEnemyPosition(base_pos);
     enemy.setEnemyTexture(&pic);
     enemy.setEnemyOffset(sf::Vector2f(5, 0));
@@ -74,10 +75,10 @@ int main(int, char const**)
         }
         E.push_back(f);
     }
-
-   
     
-
+    
+    
+    
     sf::Clock chick_anim_clk;
     
     // Start the game loop
@@ -111,15 +112,15 @@ int main(int, char const**)
         {
             player.fire();
         }
-        
+       /*
         for(int i = 0; i < E.size(); i++)
             if(E[i].size() > 0)
                 if(checkChickenBoundary(window, E[i][0]) || checkChickenBoundary(window, E[i][E[i].size()-1]))
                     for(int j = 0; j < E[i].size(); j++)
                         E[i][j].setEnemyOffset(sf::Vector2f(0, 0) - E[i][j].getEnemyOffset());
-        
+        */
         DOUBLE_FOR_LOOP
-            E[i][j].move();
+        E[i][j].move();
         
         for(int i = 0; i < E.size(); i++)
             for(int j = 0; j < E[i].size(); j++)
@@ -132,10 +133,10 @@ int main(int, char const**)
         {
             chick_anim_counter= (chick_anim_counter +1) %3;
             
-            for(int i = 0; i < E.size(); i++)
+            /*for(int i = 0; i < E.size(); i++)
                 for(int j = 0; j < E[i].size(); j++)
                     changeChickenAnimation(E[i][j], chick_anim_counter);
-            
+            */
             chick_anim_clk.restart();
         }
         
