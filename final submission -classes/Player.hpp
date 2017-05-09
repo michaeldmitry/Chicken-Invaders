@@ -15,7 +15,8 @@ class Player
 private:
     //sf::RectangleShape player;
     int lives;
-    vector <Projectile> bullets;
+    vector <vector<Projectile>> bullets;
+    int numberOfBullets;
     sf::Color col;
     sf::Clock clock;
     sf::Time time;
@@ -26,6 +27,7 @@ private:
     sf::Vector2f proj_startingOffset;
     sf::Texture* proj_texture;
     sf::Vector2f offset, proj_offset;
+    string name;
 public:
     
     Player();
@@ -39,7 +41,9 @@ public:
     void setNumOfLives();
     void incrementLives();
     void decrementLives();
-    void setNumberOfBullets();
+    void incrementBullets();
+    void decrementBullets();
+    void setNumberOfBullets(int i);
     void addBullet();
 
     void drawPlayer(sf::RenderWindow& window);
@@ -59,11 +63,11 @@ public:
     
     void killplayer();
     bool isDead();
-    bool isCollide(sf::RectangleShape& object,int i);
+    bool isCollide(sf::RectangleShape& object,int i, int j);
     void eraseProjectile(sf::RectangleShape& object);
-    void eraseProjectile(int i);
+    void eraseProjectile(int i, int j);
     
-    sf::Rect<float> getProjectileGlobalBounds(int i);
+    sf::Rect<float> getProjectileGlobalBounds(int i, int j);
     sf::Rect<float> getPlayerGlobalBounds();
     
     sf::Vector2f getPlayerScale() const;
@@ -72,6 +76,12 @@ public:
     sf::Vector2f getPlayerPosition() const;
     int getNumOfLives() const;
     int getNumOfBullets() const;
+    int getNumOfBullets(int i) const;
+    
+    void setPlayerName(const string &n);
+    string getPlayerName();
+
+
 };
 
 #endif /* Player_hpp */

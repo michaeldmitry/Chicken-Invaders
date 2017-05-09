@@ -62,6 +62,9 @@ void Player::setNumberOfBullets()
 {
     bullets.resize(1);
 }
+void Player:: addBullet()
+{
+}
 
 void Player::moveX(sf::RenderWindow& window, float p)
 {
